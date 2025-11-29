@@ -1,0 +1,282 @@
+:root{
+  --bg-1:#434B51;--bg-2:#15354E;--accent:#AF292A;--panel:#444D54;--muted:#BFC4C8;--white:#FFFFFF;
+  --max-width:1100px;--radius:10px;
+}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;background:#0f1112;color:var(--white);font-family:"Poppins",system-ui;line-height:1.4}
+.container{max-width:var(--max-width);margin:0 auto;padding:20px}
+header{height:100px;display:flex;align-items:center;justify-content:space-between;gap:20px;position:sticky;top:0;background:#0f1112;z-index:999}
+.logo{display:flex;gap:12px;align-items:center}
+.logo-img{height:56px;width:auto}
+.slogan{text-align:center;flex:1;font-family:"Montserrat",sans-serif;font-size:28px;letter-spacing:0.2px}
+.slogan .underline{display:block;height:3px;width:220px;margin:10px auto 0;background:var(--accent);border-radius:2px}
+nav a{color:#cfd6d8;text-decoration:none;margin-left:18px;font-weight:600;transition:.2s}
+nav a:hover{color:var(--accent)}
+.hero{background:var(--bg-1);border-radius:var(--radius);padding:18px;margin-bottom:20px}
+.videos{display:flex;gap:16px;align-items:stretch}
+.card{background:var(--panel);padding:14px;border-radius:8px;flex:1;display:flex;flex-direction:column}
+.video-wrap{background:#000;border-radius:6px;overflow:hidden;flex:1;display:flex;align-items:center;justify-content:center}
+video{width:100%;height:100%;object-fit:cover;display:block}
+#about{background:var(--bg-2);border-radius:10px;padding:40px 20px;margin:40px 0;text-align:center}
+#about h2{font-family:"Montserrat",sans-serif;font-size:28px;margin-bottom:12px}
+#about p{max-width:800px;margin:0 auto;color:var(--muted);font-size:16px;line-height:1.6}
+.analysis{margin-top:22px;display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.panel{background:var(--panel);padding:18px;border-radius:8px;min-height:120px}
+.divider{height:3px;background:var(--accent);width:60px;margin:6px 0 12px;border-radius:2px}
+.upload{background:var(--bg-1);border-radius:8px;padding:18px;display:flex;flex-direction:column;gap:12px;align-items:center}
+.upload input[type=file]{display:none}
+.drop{width:100%;height:220px;border-radius:8px;background:rgba(255,255,255,0.02);display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--muted);font-size:15px;padding:12px;text-align:center;margin-bottom:10px}
+.btn{background:var(--accent);border:none;padding:10px 18px;border-radius:8px;color:white;font-weight:700;cursor:pointer;transition:.2s}
+.btn:hover{filter:brightness(1.15)}
+#resultCanvas{max-width:100%;border-radius:6px;background:#000;display:block}
+.legend{margin-top:8px;color:var(--muted);font-size:13px;border:1px solid rgba(175,41,42,0.12);padding:8px;border-radius:6px}
+.plan{grid-column:1 / -1;margin-top:14px;background:var(--bg-1);padding:14px;border-radius:8px}
+.row{display:flex;gap:12px;align-items:center;justify-content:space-between;padding:10px;border-radius:6px;border:1px solid rgba(255,255,255,.03);margin-bottom:8px}
+.tag{font-weight:700;color:var(--accent)}
+.small{color:var(--muted);font-size:13px}
+.examples{grid-column:1 / -1;background:var(--panel);padding:16px;border-radius:8px;margin-top:10px}
+.examples h4{margin:0 0 10px 0}
+.example-buttons{display:flex;gap:12px;flex-wrap:wrap}
+.example-btn{background:var(--bg-1);padding:10px 16px;border-radius:6px;cursor:pointer;transition:0.2s;border:1px solid transparent}
+.example-btn:hover{border:1px solid var(--accent);background:rgba(175,41,42,0.08)}
+
+/* ---------------------------------
+           TEAM KISMI 
+----------------------------------*/
+.team{
+  margin-top:18px;
+  margin-bottom:28px; 
+  background:var(--bg-2);
+  padding:18px;
+  border-radius:8px;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+/* Başlık */
+#team h4{
+  font-family:"Montserrat",sans-serif;
+  font-size:24px;
+  font-weight:800;
+  letter-spacing:0.4px;
+  margin-bottom:6px;
+}
+
+/* Çizgi */
+#team .divider{
+  margin-top:1px;
+  margin-bottom:10px;
+}
+
+.team-cards{display:flex;gap:12px;flex-wrap:wrap}
+
+/* Kart */
+.card-member{
+  background:var(--panel);
+  padding:12px;
+  border-radius:8px;
+  flex:1;
+  min-width:200px;
+  display:flex;
+  gap:12px;
+  align-items:center;
+}
+
+.avatar-img{
+  width:72px;
+  height:72px;
+  border-radius:50%;
+  object-fit:cover;
+}
+
+/* İç metin bloğunu daha aşağı al */
+.card-member div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 6px;
+}
+
+/* İsim */
+.card-member h5 {
+  margin: 4px 0 2px 0 !important;
+}
+
+/* Açıklama */
+.card-member .small {
+  margin-top: 0px !important;
+}
+
+footer{
+  margin-top:18px;
+  background:var(--bg-1);
+  padding:16px;
+  border-radius:8px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+@media (max-width:900px){
+  .analysis{grid-template-columns:1fr}
+  .videos{flex-direction:column}
+  .slogan{font-size:20px}
+}
+
+/* TEK SATIR — Ayşegül Balım Yabacı */
+.team-cards .card-member:first-child h5 {
+  font-size:12px !important;
+  white-space:nowrap !important;
+}
+/* ANALİZ ALANI GENEL GRID YAPISI */
+.analysis {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Sol ve sağ panel kutularının aynı hizada olması için */
+.analysis .panel,
+.analysis aside {
+    background: #434B51;
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+}
+
+/* Örnekler ve müdahale planı dış kutuları hizalansın */
+.examples,
+.plan {
+    background: #434B51;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* ============================================================
+   VERİ ÖRNEKLERİ – TAM PAKET CSS
+   AFETSONAR tasarımına %100 uyumlu
+   ============================================================ */
+
+   .examples {
+    grid-column: 1 / -1;
+    background: var(--panel);
+    padding: 20px;
+    border-radius: var(--radius);
+    margin-top: 12px;
+}
+
+.examples h4 {
+    margin: 0 0 10px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.example-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+}
+
+.example-btn {
+    background: var(--bg-1);
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+    color: var(--white);
+    font-weight: 600;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.example-btn:hover {
+    border: 1px solid var(--accent);
+    background: rgba(175,41,42,0.14);
+}
+
+/* Örnek metni kutusu */
+.example-output {
+    background: #0d0f10;
+    border-radius: 8px;
+    padding: 20px;
+    color: var(--muted);
+    white-space: pre-line;
+    border: 1px solid rgba(255,255,255,0.06);
+    line-height: 1.45;
+    font-size: 14px;
+}
+
+/* Mobil uyum */
+@media (max-width: 900px) {
+    .example-buttons {
+        justify-content: center;
+    }
+    .example-btn {
+        width: calc(50% - 10px);
+        text-align: center;
+    }
+}
+.video-responsive {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 oran */
+  height: 0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.video-responsive iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.video-responsive {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 oran */
+  height: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #000;
+}
+
+.video-responsive iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.video-box {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 oran */
+  background: #000;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* iframe’i küçült — dört tarafta siyah çerçeve oluşsun */
+.video-box iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 90%;      /* videoyu küçük gösteriyoruz */
+  height: 90%;     /* içine sığacak şekilde */
+  transform: translate(-50%, -50%);
+  border: 0;
+}
+
+

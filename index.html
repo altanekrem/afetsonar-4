@@ -1,0 +1,155 @@
+
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AFETSONAR — Demo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <img src="assets/logo.png" alt="AfetSonar Logo" class="logo-img">
+        <div><div style="font-weight:700">AFETSONAR</div><div style="font-size:12px;color:var(--muted)"> 2025 | AFETSONAR              </div></div>
+      </div>
+      <div class="slogan">Bir Dakika, Bir Hayat<span class="underline"></span></div>
+      <nav><a href="#top">Ana Sayfa</a><a href="#about">Hakkında</a><a href="#team">Takım</a><a href="#contact">İletişim</a></nav>
+    </header>
+
+    <!--  GÜNCELLENEN KISIM (TEK VİDEO) -->
+    <section id="top" class="hero">
+  <div class="videos">
+
+    <div class="card">
+      <h3>AFETSONAR Nedir?</h3>
+
+      <div class="video-box">
+  <iframe 
+    src="https://streamable.com/e/0pqusa"
+    allowfullscreen>
+  </iframe>
+</div>
+
+
+    </div>
+
+  </div>
+
+  <small>Proje Tanıtımı Videosu</small>
+</section>
+
+    <!--  /GÜNCELLENEN KISIM -->
+
+    <section id="about">
+      <h2>Hakkımızda</h2>
+      <p>AFETSONAR, afet bölgelerinde hızlı veri analizi ve ekip koordinasyonu sağlayan yapay zekâ tabanlı bir sistemdir. Uydu ve İHA görüntülerini kullanarak hasar tespiti yapar, kritik alanları önceliklendirir ve müdahale ekiplerinin yönlendirilmesini optimize eder.</p>
+    </section>
+
+    <!-- ANALİZ ALANI -->
+    <main class="analysis">
+      <section class="panel upload">
+        <h4>Deprem Görüntülerini Karşılaştır</h4>
+        <div class="divider"></div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;width:100%;">
+          <label class="drop" id="dropBefore">
+            <div style="font-weight:600">📁 Deprem Öncesi Görüntü</div>
+            <button class="btn" id="chooseBeforeBtn">Seç</button>
+            <input type="file" id="beforeInput" accept="image/*">
+          </label>
+
+          <label class="drop" id="dropAfter">
+            <div style="font-weight:600">📁 Deprem Sonrası Görüntü</div>
+            <button class="btn" id="chooseAfterBtn">Seç</button>
+            <input type="file" id="afterInput" accept="image/*">
+          </label>
+        </div>
+
+        <div style="display:flex;gap:8px;justify-content:center;margin-top:10px">
+          <button class="btn" id="analyzeBtn">ANALİZ ET</button>
+          <button class="btn" id="loadDemoBtn">Demo Görselleri Yükle</button>
+        </div>
+      </section>
+
+      <aside class="panel" id="resultPanel">
+        <h4>Analiz Çıktısı</h4>
+        <div class="divider"></div>
+        <canvas id="resultCanvas" width="800" height="450"></canvas>
+        <div class="legend">Kırmızı: Ağır hasar | Sarı: Orta | Yeşil: Hafif</div>
+      </aside>
+
+      <section class="examples">
+        <h4>Veri Setinden Örnekler</h4>
+        <div class="example-list">
+  <button class="example-btn" data-example="1">1. Örnek</button>
+  <button class="example-btn" data-example="2">2. Örnek</button>
+  <button class="example-btn" data-example="3">3. Örnek</button>
+  <button class="example-btn" data-example="4">4. Örnek</button>
+</div>
+
+      </section>
+
+      <section class="plan">
+        <h4>AFETSONAR Müdahale Planı</h4>
+        <div class="divider"></div>
+        <div id="afetPlan"></div>
+      </section>
+    </main>
+
+  <section id="team" class="team">
+  <h4>Takım Üyeleri</h4>
+  <div class="divider"></div>
+
+  <div class="team-cards" style="justify-content:center;">
+
+    <!-- 1 — Ayşegül -->
+    <div class="card-member">
+      <img class="avatar-img" src="assets/1.jpg">
+      <div>
+        <h5>Ayşegül Balım Yabacı</h5>
+        <p class="small">Takım Kaptanı – Yazılım & Proje Yönetimi</p>
+      </div>
+    </div>
+
+    <!-- 2 — Altan -->
+    <div class="card-member">
+      <img class="avatar-img" src="assets/2.jpg">
+      <div>
+        <h5>Altan Ekrem Özkan</h5>
+        <p class="small">Yazılım & Algoritma Geliştirici</p>
+      </div>
+    </div>
+
+    <!-- 3 — Ömer -->
+    <div class="card-member">
+      <img class="avatar-img" src="assets/3.jpg">
+      <div>
+        <h5>Ömer Tuncer</h5>
+        <p class="small">Yapay Zekâ & Model Geliştirme</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+    <footer id="contact" class="container">
+      <div><div style="font-weight:700">İletişim</div><div style="color:var(--muted)">
+  Instagram: 
+  <a href="https://www.instagram.com/afetsonar.ai/" 
+     target="_blank" 
+     style="color:#56A8FB;text-decoration:none;font-weight:600;">
+    @afetsonar.ai
+  </a>
+</div>
+</div>
+      <div style="text-align:right"><small>© 2025 | AFETSONAR </small></div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
